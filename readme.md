@@ -1,11 +1,12 @@
 
+# go api项目
 
 ## 程序结构
 
-```
-.├── app                            // 程序具体逻辑代码
+```bash
+├── app                            // 程序具体逻辑代码
 │   ├── cmd                         // 命令
-│   │   ├── cache.go                
+│   │   ├── cache.go
 │   │   ├── cmd.go
 │   │   ├── key.go
 │   │   ├── make                    // make 命令及子命令
@@ -62,7 +63,7 @@
 │       ├── user_request.go
 │       └── ...
 ├── bootstrap                       // 程序模块初始化目录
-│   ├── app.go  
+│   ├── app.go
 │   ├── cache.go
 │   ├── database.go
 │   ├── logger.go
@@ -127,3 +128,20 @@
 ├── readme.md                       // 项目 readme
 └── README.md                       // 项目 readme
 ```
+
+## 入口文件 main.go
+
+入口文件需要简单清晰。完成一些加载和初始化工作后，调用 `app.Run()` 启动程序。
+
+## 添加第三方库
+
+1. 使用 `go get` 命令安装第三方库，如 `go get github.com/gin-gonic/gin`
+2. 写代码使用第三方库，如 `import "github.com/gin-gonic/gin"`
+3. 使用 `go mod tidy` 命令整理依赖
+
+## 功能开发步骤
+
+1、创建目录和文件，或修改现有文件的逻辑。
+2、编写测试用例，测试通过。
+3、提交代码，通过 CI/CD 流程。
+4、编写文档，提交代码。
