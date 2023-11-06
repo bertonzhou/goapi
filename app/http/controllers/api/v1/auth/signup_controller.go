@@ -5,6 +5,7 @@ import (
 	v1 "gohub/app/http/controllers/api/v1"
 	"gohub/app/models/user"
 	"gohub/app/requests"
+	"gohub/pkg/auth"
 	"gohub/pkg/jwt"
 	"gohub/pkg/response"
 
