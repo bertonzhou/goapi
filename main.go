@@ -38,6 +38,9 @@ func main() {
 	// 初始化DB
 	bootstrap.SetupDB()
 
+	// 初始化 Redis
+	bootstrap.SetupRedis()
+
 	// 初始化路由绑定
 	bootstrap.SetupRoute(router)
 
@@ -47,7 +50,4 @@ func main() {
 		// 错误处理，端口被占用了或者其他错误
 		fmt.Println(err.Error())
 	}
-
-	// 打印访问地址
-	fmt.Println("Server run at: http://127.0.0.1:" + config.Get("app.port"))
 }
