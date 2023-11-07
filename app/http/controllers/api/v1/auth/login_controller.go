@@ -28,7 +28,7 @@ func (lc *LoginController) LoginByPhone(c *gin.Context) {
 	user, err := auth.LoginByPhone(request.Phone)
 	if err != nil {
 		// 失败，显示错误提示
-		response.Error(c, err, "账号不存在")
+		response.Error(c, err, "账号不存在或密码错误")
 	} else {
 		// 登录成功
 		token := jwt.NewJWT().IssueToken(user.GetStringID(), user.Name)
