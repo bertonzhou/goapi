@@ -5,10 +5,9 @@ import (
 	"crypto/rand"
 	"fmt"
 	"io"
+	mathrand "math/rand"
 	"reflect"
 	"time"
-
-	mathrand "math/rand"
 )
 
 // Empty 类似于 PHP 的 empty() 函数

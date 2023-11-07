@@ -42,10 +42,10 @@ func main() {
 			bootstrap.SetupRedis()
 
 			// 初始化缓存
+			bootstrap.SetupCache()
 		},
 	}
 
-	// 注册子命令
 	// 注册子命令
 	rootCmd.AddCommand(
 		cmd.CmdServe,
@@ -53,6 +53,8 @@ func main() {
 		cmd.CmdPlay,
 		make.CmdMake,
 		cmd.CmdMigrate,
+		cmd.CmdDBSeed,
+		cmd.CmdCache,
 	)
 
 	// 配置默认运行 Web 服务
